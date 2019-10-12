@@ -20,6 +20,7 @@
         	<li><a href="">Inicio</a></li>
          	<li><a href="">Usuários</a></li>
           	<li class="k"><a href="">Relatórios</a></li>
+          	<li class="k"><a href="">Estoque</a></li>
         </ul></li>
         </ul>
         <!-- Dropdown Structure -->

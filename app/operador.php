@@ -10,7 +10,6 @@ class operador extends Model
 
     protected $fillable = array('nome', 'matricula', 'id_sacola');
 
-    public function sacola(){
-    	return this->hasMany('app\sacola');
-    }
+    protected $table = "operador";
+
 }

@@ -8,9 +8,7 @@ class sacola extends Model
 {
     public $timestamps = false;
 
-    protected $fillable = array('id', 'data', 'retirada','devolucao','matricula_operador');
+    protected $fillable = array('id', 'data', 'retirada','devolucao','matricula_operador','sobra');
 
-    public function operador(){
-    	return this->hasMany('app\operador');
-    }
+
 }

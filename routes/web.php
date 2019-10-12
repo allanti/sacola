@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/teste', function () {
     return view('teste');
 });
+
+Route::post('/sacola/atualiza', 'SacolaController@atualiza');

@@ -30,7 +30,9 @@ class SacolaController extends Controller
 				$devolucao = $resultado[0]->retirada + $dataForm['sacola'];
 				$devolucao = $devolucao - $resultado[0]->devolucao;
 				//atualiza o registro (ele ira entra no if caso ja tenha um registro no banco)
-				DB::table('sacolas')->update(['retirada' => $dataForm['sacola'] + $restante, 'sobra' => $devolucao]);
+				DB::table('sacolas')
+				->where('data',date('Y-m-d'))
+				->update(['retirada' => $dataForm['sacola'] + $restante, 'sobra' => $devolucao]);
 				//retorna para pagina inicial
 				return redirect('/');
 			//caso usuario ainda nao tenha pego sacola ele ira cair nesse elseif
@@ -55,7 +57,9 @@ class SacolaController extends Controller
 				$devolucao = $resultado[0]->retirada - $devolucao;
 
 				//atualiza o registro
-				DB::table('sacolas')->update(['devolucao' => $dataForm['sacola'] + $restante, 'sobra' => $devolucao]);
+				DB::table('sacolas')
+				->where('data',date('Y-m-d'))
+				->update(['devolucao' => $dataForm['sacola'] + $restante, 'sobra' => $devolucao]);
 				return redirect('/');
 			}elseif($acao == 2){
 				//caso operador nao tenha registro na tabela sacolas quer dize que ele ainda nao pegou sacola

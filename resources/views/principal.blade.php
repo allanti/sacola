@@ -16,7 +16,7 @@
         <div class="ea k" style="background-image: url(&#39;//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/stars.jpg?0&#39;);"></div>
       </div>
       <div class="nav-wrapper db">
-        <a href="" class="brand-logo"><i class="material-icons">camera</i>Atacadão</a>
+        <a href="" class="brand-logo"><i class="material-icons">camera</i></a>
         <a href="" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="bt hide-on-med-and-down">
         	<li><a href="">Inicio</a></li>

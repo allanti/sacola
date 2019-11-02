@@ -8,6 +8,7 @@ use App\Sacola;
 use App\operador;
 
 
+
 class SacolaController extends Controller
 {
     public function atualiza(){

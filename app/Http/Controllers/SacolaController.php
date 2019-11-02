@@ -38,7 +38,7 @@ class SacolaController extends Controller
 			//caso usuario ainda nao tenha pego sacola ele ira cair nesse elseif
 			}elseif($acao == 2){
 				//adicioina novo registro
-				DB::table('sacolas')->insert(['matricula_operador' => $matricula, 'retirada' => $dataForm['sacola'], 'devolucao' => 0,'sobra' => 0, 'data' => date('Y-m-d')]);
+				DB::table('sacolas')->insert(['matricula_operador' => $matricula, 'retirada' => $dataForm['sacola'], 'devolucao' => 0,'sobra' => $dataForm['sacola'], 'data' => date('Y-m-d')]);
 				//retorna para pagina inicial
 				return redirect('/');
 			//caso o usuario nao tenha cadastro entra no else
